@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-=======
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -8,21 +8,26 @@ import Register from "./pages/Register";
 
 function App() {
   return (
-    <BrowserRouter>
-
+    <Router>
       <Routes>
+        
+        {/* Pages with layout */}
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Home />
+            </MainLayout>
+          }
+        />
 
-        <Route path="/" element={<Home />} />
-
+        {/* Auth pages without layout */}
         <Route path="/login" element={<Login />} />
-
         <Route path="/register" element={<Register />} />
 
       </Routes>
-
-    </BrowserRouter>
+    </Router>
   );
 }
 
 export default App;
->>>>>>> fb7e2a851ba709b09279f27ef9348f6342f20a28
