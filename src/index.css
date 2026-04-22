@@ -9,3 +9,16 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 50s linear infinite;
+}
