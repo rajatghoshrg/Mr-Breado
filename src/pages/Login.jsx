@@ -14,7 +14,7 @@ const Login = () => {
 
     
         <h1 style={{ color: "#F97316" }} className="text-2xl font-bold text-center">
-          🍞 Mr. Breado
+          Mr. Breado
         </h1>
 
         <p className="text-center text-gray-500 mb-6">
