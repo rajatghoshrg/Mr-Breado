@@ -6,7 +6,7 @@ const testimonials = [
     name: "Rahul Sharma",
     role: "Food Blogger",
     review:
-      "The delivery was unbelievably fast and the burger tasted amazing. Definitely ordering again!",
+      "Fast delivery and amazing taste. The burgers were hot and fresh.",
   },
 
   {
@@ -14,7 +14,7 @@ const testimonials = [
     name: "Priya Das",
     role: "Regular Customer",
     review:
-      "Fresh ingredients, hot meals, and smooth ordering experience. Mr. Breado never disappoints.",
+      "Smooth ordering experience and delicious meals every time.",
   },
 
   {
@@ -22,85 +22,63 @@ const testimonials = [
     name: "Amit Roy",
     role: "College Student",
     review:
-      "Affordable prices and delicious food. Perfect for late-night cravings.",
+      "Affordable food with premium quality and quick delivery.",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-[#FFF7ED] via-[#FFF1F2] to-[#FFE7D6]">
 
-      {/* Heading */}
-      <div className="max-w-3xl mb-16">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-[#F97316]/10 blur-3xl rounded-full"></div>
 
-        <p className="text-[#EF4444] font-semibold uppercase tracking-wider mb-3">
-          Customer Stories
-        </p>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#EF4444]/10 blur-3xl rounded-full"></div>
 
-        <h2 className="text-4xl font-bold mb-4">
-          People Love Our Food Experience
-        </h2>
+      <div className="max-w-6xl mx-auto relative z-10">
 
-        <p className="text-gray-600">
-          Real feedback from customers who enjoy ordering from Mr. Breado every day.
-        </p>
+        {/* Heading */}
+        <div className="text-center mb-16">
 
-      </div>
+          <span className="inline-block px-4 py-2 rounded-full bg-white/70 backdrop-blur-md text-[#EF4444] text-sm font-semibold shadow-sm mb-5">
+            Testimonials
+          </span>
 
-      {/* Layout */}
-      <div className="grid lg:grid-cols-3 gap-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            What Our Customers Say
+          </h2>
 
-        {/* Featured Large Card */}
-        <div className="lg:col-span-2 bg-[#F97316] text-white rounded-3xl p-10 flex flex-col justify-between shadow-lg">
-
-          <div>
-
-            <div className="flex gap-1 text-white mb-6">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-            </div>
-
-            <p className="text-2xl leading-relaxed font-medium">
-              “{testimonials[0].review}”
-            </p>
-
-          </div>
-
-          <div className="mt-10 flex items-center gap-4">
-
-            {/* Avatar */}
-            <div className="w-14 h-14 rounded-full bg-white text-[#F97316] font-bold flex items-center justify-center">
-              RS
-            </div>
-
-            <div>
-              <h4 className="font-bold">
-                {testimonials[0].name}
-              </h4>
-
-              <p className="text-sm text-white/80">
-                {testimonials[0].role}
-              </p>
-            </div>
-
-          </div>
+          <p className="text-gray-600 mt-5 max-w-2xl mx-auto">
+            Real experiences from people who love ordering from Mr. Breado.
+          </p>
 
         </div>
 
-        {/* Side Reviews */}
-        <div className="flex flex-col gap-6">
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-6">
 
-          {testimonials.slice(1).map((user) => (
+          {testimonials.map((user) => (
             <div
               key={user.id}
-              className="border rounded-3xl p-6 shadow-sm hover:shadow-md transition"
+              className="
+                group relative overflow-hidden
+                bg-white
+                border border-orange-100
+                rounded-[28px]
+                p-7
+                shadow-lg
+                transition-all duration-500
+                hover:-translate-y-2
+                hover:shadow-2xl
+                hover:border-[#F97316]
+              "
             >
 
-              {/* Rating */}
-              <div className="flex gap-1 text-[#F97316] mb-4">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F97316]/5 to-[#EF4444]/5 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+              {/* Stars */}
+              <div className="relative z-10 flex gap-1 text-[#F97316] mb-5">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -109,23 +87,25 @@ const Testimonials = () => {
               </div>
 
               {/* Review */}
-              <p className="text-gray-600 mb-6">
+              <p className="relative z-10 text-gray-700 leading-relaxed mb-8">
                 “{user.review}”
               </p>
 
               {/* User */}
-              <div className="flex items-center gap-3">
+              <div className="relative z-10 flex items-center gap-4">
 
-                <div className="w-12 h-12 rounded-full bg-[#FFF7ED] text-[#EF4444] font-bold flex items-center justify-center">
+                {/* Avatar */}
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#F97316] to-[#EF4444] text-white flex items-center justify-center font-bold shadow-md">
                   {user.name
                     .split(" ")
                     .map((word) => word[0])
                     .join("")}
                 </div>
 
+                {/* Info */}
                 <div>
 
-                  <h4 className="font-semibold">
+                  <h4 className="font-bold text-gray-900">
                     {user.name}
                   </h4>
 
@@ -136,6 +116,9 @@ const Testimonials = () => {
                 </div>
 
               </div>
+
+              {/* Bottom Line */}
+              <div className="relative z-10 mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r from-[#F97316] to-[#EF4444] rounded-full transition-all duration-500"></div>
 
             </div>
           ))}
