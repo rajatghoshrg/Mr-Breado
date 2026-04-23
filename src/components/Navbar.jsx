@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 // Icons
 import { MdLanguage } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 
 // Button Component
@@ -17,6 +16,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 200);
+      setOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,16 +28,16 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4 flex items-center justify-between bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300">
       
-      {/* 🔴 LOGO */}
+      {/* LOGO */}
       <div className="text-2xl font-extrabold tracking-wide cursor-pointer">
         <span className="text-red-500">Mr</span>
         <span className="text-orange-500">Breado</span>
       </div>
 
-      {/* 🔵 RIGHT SIDE */}
+      {/*  RIGHT SIDE */}
       <div className="flex items-center gap-6 relative">
 
-        {/* 🟡 HERO STATE */}
+        {/* HERO STATE */}
         {!scrolled && (
           <>
             {/* 🌐 Language */}
@@ -52,7 +52,7 @@ const Navbar = () => {
               </button>
 
               {open && (
-                <div className="absolute right-0 mt-3 w-36 bg-white shadow-lg rounded-lg overflow-hidden border">
+                <div className="absolute right-0 mt-3 w-36 bg-white shadow-lg rounded-lg overflow-hidden border z-50">
                   {languages.map((lang) => (
                     <div
                       key={lang}
@@ -69,38 +69,45 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* 🔐 Login Button */}
-            <Link to="/login">
-              <Button className="flex items-center gap-2">
-                <FaUser size={14} />
-                Login / Sign Up
+            {/* Get App */}
+            <a href="#download">
+              <Button className="px-6 py-2">
+                Get App
               </Button>
-            </Link>
+            </a>
           </>
         )}
 
-        {/* 🔴 SCROLLED STATE */}
+        {/* SCROLLED STATE */}
         {scrolled && (
           <>
             <Link
               to="/"
               className="text-gray-700 hover:text-red-500 transition"
             >
-              Home
+              Order Online
             </Link>
 
             <Link
-              to="/login"
+              to="/restaurant"
               className="text-gray-700 hover:text-red-500 transition"
             >
-              Login
+              Add a Restaurant
             </Link>
 
-            <Link to="/register">
-              <Button size="md">
-                Sign Up
-              </Button>
+            <Link
+              to="/rider"
+              className="text-gray-700 hover:text-red-500 transition"
+            >
+              Become a Rider
             </Link>
+
+            {/* 🚀 Get App */}
+            <a href="#download">
+              <Button size="md">
+                Get App
+              </Button>
+            </a>
           </>
         )}
       </div>

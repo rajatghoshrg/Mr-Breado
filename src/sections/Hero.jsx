@@ -27,7 +27,7 @@ const Hero = () => {
     "/images/hero/herofood20.avif"
   ];
 
-  // 🔥 Scroll zoom effect
+  //  Scroll zoom effect
   useEffect(() => {
     const handleScroll = () => {
       const img = document.getElementById("heroBigImage");
@@ -46,12 +46,12 @@ const Hero = () => {
   return (
     <section className="pt-24 md:pt-28 pb-12 md:pb-16 bg-[#fff7f5] relative overflow-hidden">
 
-      {/* 🍔 Floating Icons */}
+      {/* Floating Icons */}
       <FaPizzaSlice className="hidden md:block absolute left-10 top-20 text-red-400 text-4xl opacity-20 animate-pulse" />
       <GiHamburger className="hidden md:block absolute right-10 top-24 text-orange-400 text-5xl opacity-20 animate-pulse" />
       <GiNoodles className="hidden md:block absolute left-1/4 bottom-10 text-yellow-400 text-5xl opacity-20 animate-pulse" />
 
-      {/* 🔥 CONTENT */}
+      {/*  CONTENT */}
       <div className="max-w-3xl mx-auto text-center px-4 sm:px-6">
 
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-snug md:leading-tight">
@@ -62,7 +62,7 @@ const Hero = () => {
         </h1>
 
         <p className="mt-4 sm:mt-6 text-gray-600 text-sm sm:text-base md:text-lg px-2">
-          Whether you are craving bold flavors, scaling your restaurant, or ready to earn – 
+          Whether you are craving bold flavors, scaling your restaurant, or ready to earn –
           we deliver faster, smarter, tastier experiences every single time today.
         </p>
 
@@ -73,30 +73,53 @@ const Hero = () => {
         </div>
       </div>
 
+      {/*  AUTO SLIDING IMAGES */}
       {/* 🍔 AUTO SLIDING IMAGES */}
       <div className="mt-10 md:mt-16 overflow-hidden">
-        <div className="flex gap-4 animate-scroll-left w-max">
+        <div className="flex gap-6 animate-scroll-left w-max px-6">
+
           {[...images, ...images].map((img, i) => (
             <img
               key={i}
               src={img}
               alt="food"
-              className="w-36 h-24 sm:w-48 sm:h-32 md:w-52 md:h-36 object-cover rounded-xl shadow-md"
+              className="
+          w-[220px] h-[220px] 
+          sm:w-[240px] sm:h-[240px] 
+          md:w-[260px] md:h-[260px] 
+          object-cover 
+          rounded-2xl 
+          shadow-md 
+          flex-shrink-0
+        "
             />
           ))}
+
         </div>
       </div>
 
-      {/* 🍽️ BIG PARALLAX IMAGE */}
-      <div className="mt-12 md:mt-20 w-full overflow-hidden">
-        <img
-          id="heroBigImage"
-          src="/images/hero/heroimagebig.avif"   // 👉 your big image
-          alt="big food"
-          className="w-full h-[400px] sm:h-[500px] md:h-[700px] object-cover transition-transform duration-300 ease-out"
-        />
-      </div>
+      {/*  BIG PARALLAX IMAGE */}
+      <div className="mt-16 md:mt-24 w-full overflow-hidden">
+        <div className="relative w-full h-[90vh] md:h-[105vh] overflow-hidden">
 
+          <img
+            id="heroBigImage"
+            src="/images/hero/heroimagebig.avif"
+            alt="big food"
+            className="
+        w-full h-full 
+        object-cover 
+        object-center
+        scale-110
+        transition-transform duration-700 ease-out
+      "
+          />
+
+          {/* Soft overlay */}
+          <div className="absolute inset-0 bg-black/10"></div>
+
+        </div>
+      </div>
     </section>
   );
 };

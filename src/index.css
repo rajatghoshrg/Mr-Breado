@@ -10,6 +10,7 @@
   scrollbar-width: none;
 }
 
+/* 🔥 Smooth infinite scroll */
 @keyframes scrollLeft {
   0% {
     transform: translateX(0%);
@@ -21,4 +22,21 @@
 
 .animate-scroll-left {
   animation: scrollLeft 50s linear infinite;
+  will-change: transform; /* ✅ smoother animation */
+}
+
+/* 🧊 Pause on hover (premium feel) */
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}
+
+/*  Smooth image rendering (important for big image zoom) */
+img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* 🔥 Optional: smoother transitions globally */
+* {
+  scroll-behavior: smooth;
 }
