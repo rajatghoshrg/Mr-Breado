@@ -10,9 +10,15 @@ const Footer = () => {
     return (
         <footer className="bg-[#f5f5f5] text-gray-700 pt-12 pb-6 px-6 md:px-12">
 
-            {/*  TOP GRID */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+            {/* CORPORATE ADDRESS */}
+            <div className="flex items-center justify-center gap-2 mt-16 md:mt-20 mb-10 md:mb-14 text-gray-800 font-medium">
+                <MdLocationOn className="text-red-500 text-xl" />
+                Corporate Address
+            </div>
 
+            {/* TOP GRID */}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+                
                 {/* About */}
                 <div>
                     <h3 className="font-semibold mb-4">About Us</h3>
@@ -66,12 +72,6 @@ const Footer = () => {
                         West Bengal-700102, India
                     </p>
                 </div>
-            </div>
-
-            {/*  CORPORATE ADDRESS */}
-            <div className="flex items-center justify-center gap-2 mt-10 text-gray-800 font-medium">
-                <MdLocationOn className="text-red-500 text-xl" />
-                Corporate Address
             </div>
 
             {/*  SUPPORT */}

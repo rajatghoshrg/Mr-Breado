@@ -56,14 +56,14 @@ const Hero = () => {
 
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-snug md:leading-tight">
           <span className="text-red-500">Mr. Breado</span>{" "}
-          <span className="text-gray-800">Serves</span>
+          <span className="text-gray-800">brings</span>
           <br />
-          <span className="text-blue-600">Fresh Happiness</span>
+          <span className="text-blue-600">everyone together!</span>
         </h1>
 
         <p className="mt-4 sm:mt-6 text-gray-600 text-sm sm:text-base md:text-lg px-2">
-          Whether you are craving bold flavors, scaling your restaurant, or ready to earn –
-          we deliver faster, smarter, tastier experiences every single time today.
+          Whether you are craving a meal, growing your restaurant,
+          or looking to earn – we’ve got you covered with the best food delivery app!
         </p>
 
         <div className="mt-6 sm:mt-8">

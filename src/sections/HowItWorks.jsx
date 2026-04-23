@@ -7,7 +7,7 @@ const steps = [
     id: "1",
     title: "Explore Restaurants",
     desc:
-      "Satisfy your cravings from our extensive list of restaurants nearby.",
+      "Satisfy your cravings from our extensive list of restaurants — whether close by or miles away. Gintaa is your go-to for the best online food delivery app experience.",
     image: userOrder1,
   },
 
@@ -15,7 +15,7 @@ const steps = [
     id: "2",
     title: "Order Fast, Pay Easy",
     desc:
-      "Place your order quickly and complete payments seamlessly.",
+      "With just a few taps, place your order and complete payment seamlessly — all through the best food delivery app.",
     image: userOrder2,
   },
 
@@ -23,22 +23,22 @@ const steps = [
     id: "3",
     title: "Track Your Order",
     desc:
-      "Monitor your order live from preparation to doorstep delivery.",
+      "Monitor your order in real time — from preparation to doorstep delivery, stay informed at every stage with the best food ordering app.",
     image: userOrder3,
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="bg-white overflow-hidden pt-24 pb-20 px-4 sm:px-6">
+    <section className="bg-[#FFF8F5] overflow-hidden py-24 px-4 sm:px-6">
 
       <div className="max-w-7xl mx-auto">
 
-        {/* Heading */}
+        {/* TOP CONTENT */}
 
-        <div className="text-center mb-20">
+        <div className="text-center mb-28">
 
-          <h2 className="text-4xl sm:text-5xl font-black text-black">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-black leading-tight">
 
             One Click,
 
@@ -58,9 +58,9 @@ const HowItWorks = () => {
               rounded-xl
               text-lg
               font-semibold
-              transition-all
-              duration-300
+              transition-all duration-300
               hover:scale-105
+              shadow-lg
             "
           >
             Order Food Online
@@ -68,65 +68,69 @@ const HowItWorks = () => {
 
         </div>
 
-        {/* Main */}
+        {/* MAIN SECTION */}
 
         <div className="relative">
 
-          {/* Connected Dotted Line */}
+          {/* WAVY LINE */}
 
-          <div className="hidden lg:block absolute top-0 left-0 w-full z-0">
+<div className="hidden lg:block absolute -top-8 left-0 w-full z-0">
 
-            <svg
-              width="100%"
-              height="120"
-              viewBox="0 0 1200 120"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+  <svg
+    width="100%"
+    height="90"
+    viewBox="0 0 1200 90"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
 
-              <path
-                d="
-                  M 80 60
-                  C 220 -20, 320 140, 470 60
-                  S 760 -20, 910 60
-                  S 1080 140, 1180 60
-                "
-                stroke="#CBD5E1"
-                strokeWidth="3"
-                strokeDasharray="10 10"
-                strokeLinecap="round"
-                fill="transparent"
-              />
+    <path
+      d="
+        M 60 45
+        C 180 -10, 300 100, 430 45
+        S 700 -10, 830 45
+        S 1060 100, 1160 45
+      "
+      stroke="#D1D5DB"
+      strokeWidth="3"
+      strokeDasharray="10 10"
+      strokeLinecap="round"
+      fill="transparent"
+    />
 
-            </svg>
+  </svg>
 
-          </div>
+</div>
 
-          {/* Steps */}
+          {/* STEPS */}
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14 items-start">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-16">
 
             {steps.map((step) => (
 
               <div
                 key={step.id}
-                className="text-center"
+                className="group text-center flex
+    flex-col
+    h-full"
               >
 
-                {/* Number */}
+                {/* NUMBER */}
 
                 <div
                   className="
+                    relative z-20
                     w-16 h-16
+                    mx-auto
                     rounded-full
                     bg-white
-                    shadow-lg
+                    shadow-xl
+                    border border-red-100
                     flex items-center justify-center
-                    mx-auto
                     text-[#EF4444]
                     text-3xl
                     font-black
-                    mb-10
+                    mb-12
                   "
                 >
 
@@ -134,55 +138,55 @@ const HowItWorks = () => {
 
                 </div>
 
-                {/* Title */}
+                {/* TEXT */}
 
-                <h3 className="text-3xl font-bold text-black mb-5">
+                <div className="mb-10 flex-grow">
 
-                  {step.title}
+                  <h3 className="text-3xl font-bold text-black mb-5">
 
-                </h3>
+                    {step.title}
 
-                {/* Description */}
+                  </h3>
 
-                <p
-                  className="
-                    text-gray-500
-                    leading-relaxed
-                    text-lg
-                    max-w-sm
-                    mx-auto
-                    mb-12
-                  "
-                >
+                  <p
+                    className="
+                      text-gray-500
+                      leading-relaxed
+                      max-w-sm
+                      mx-auto
+                      text-lg
+                    "
+                  >
 
-                  {step.desc}
+                    {step.desc}
 
-                </p>
+                  </p>
 
-                {/* Phone */}
+                </div>
+
+                {/* PHONE */}
 
                 <div className="flex justify-center">
 
                   <div
                     className="
-                      relative
-                      w-[240px]
-                      h-[500px]
-                      bg-black
-                      rounded-[45px]
-                      p-[5px]
-                      border-[4px]
-                      border-[#EF4444]
-                      shadow-2xl
-                      overflow-hidden
-                      transition-all
-                      duration-500
-                      hover:scale-105
-                      hover:-translate-y-2
-                    "
+                     relative
+                     w-[290px]
+                     h-[580px]
+                     bg-black
+                     rounded-[55px]
+                     p-[6px]
+                     border-[5px]
+                     border-[#EF4444]
+                     shadow-2xl
+                     transition-all duration-500
+                     hover:scale-105
+                     hover:-translate-y-3
+                     hover:shadow-[0_25px_60px_rgba(239,68,68,0.35)]
+                     "
                   >
 
-                    {/* Camera */}
+                    {/* DYNAMIC ISLAND */}
 
                     <div
                       className="
@@ -190,37 +194,39 @@ const HowItWorks = () => {
                         top-3
                         left-1/2
                         -translate-x-1/2
-                        w-24
-                        h-5
+                        w-28
+                        h-6
                         bg-black
                         rounded-full
                         z-20
                       "
                     ></div>
 
-                    {/* Screen */}
+                    {/* SCREEN */}
 
                     <div
                       className="
                         w-full
                         h-full
-                        rounded-[38px]
+                        rounded-[42px]
                         overflow-hidden
                         bg-white
                       "
                     >
 
+                      {/* IMAGE */}
+
                       <img
                         src={step.image}
                         alt={step.title}
                         className="
-                          w-full
-                          h-full
-                          object-cover
-                          transition-transform
-                          duration-700
-                          hover:scale-110
-                        "
+                        w-full
+                        h-full
+                       object-cover
+                       transition-transform
+                       duration-700
+                       hover:scale-110
+                       "
                       />
 
                     </div>
