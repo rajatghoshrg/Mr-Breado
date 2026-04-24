@@ -1,4 +1,5 @@
-import riderImg from "../assets/rider.webp";
+import riderImg from "../assets/rider.jpeg";
+import appBanner from "../assets/appbanner.jpeg";
 
 import Button from "../components/Button";
 
@@ -34,15 +35,19 @@ const DeliveryPartner = () => {
 
         {/* LEFT SIDE IMAGE */}
 
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex justify-center lg:justify-start w-full">
 
           <div
             className="
               relative
+              w-full
+              max-w-[550px]
+              aspect-[4/5]
               overflow-hidden
               rounded-[40px]
               shadow-[0_25px_80px_rgba(239,68,68,0.25)]
               group
+              bg-black
             "
           >
 
@@ -66,8 +71,8 @@ const DeliveryPartner = () => {
               alt="Delivery Rider"
               className="
                 w-full
-                max-w-[550px]
-                object-cover
+                h-full
+                object-contain
                 transition-transform
                 duration-700
                 group-hover:scale-105
@@ -198,6 +203,32 @@ const DeliveryPartner = () => {
         </div>
 
       </div>
+
+      {/* APP BANNER IMAGE */}
+
+<div className="mt-24">
+
+  <div
+    className="
+      w-full
+      overflow-hidden
+      shadow-[0_25px_80px_rgba(239,68,68,0.15)]
+    "
+  >
+
+    <img
+      src={appBanner}
+      alt="Mr Breado Banner"
+      className="
+        w-full
+        h-full
+        object-cover
+      "
+    />
+
+  </div>
+
+</div>
 
     </section>
   );
