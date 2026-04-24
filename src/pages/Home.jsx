@@ -4,6 +4,7 @@ import HowItWorks from "../sections/HowItWorks";
 import Partner from "../sections/Partner";
 import Testimonials from "../sections/Testimonials";
 // import Offer from "../sections/Offer";
+import Deliverypartner from "../sections/Deliverypartner";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       {/* <Offer /> */}
       {/* <Features /> */}
       <HowItWorks />
+      <Deliverypartner />
       <Partner />
       <Testimonials />
     </>
