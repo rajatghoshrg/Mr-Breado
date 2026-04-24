@@ -33,10 +33,19 @@ const Hero = () => {
       const img = document.getElementById("heroBigImage");
       if (!img) return;
 
-      const scrollY = window.scrollY;
-      const scale = 1 + scrollY * 0.0003;
+      const rect = img.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-      img.style.transform = `scale(${Math.min(scale, 1.2)})`;
+      // Animate only when visible
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        const progress =
+          (windowHeight - rect.top) / (windowHeight + rect.height);
+
+        // Smooth in + out zoom
+        const scale = 1.1 + Math.sin(progress * Math.PI) * 0.2;
+
+        img.style.transform = `scale(${scale})`;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);

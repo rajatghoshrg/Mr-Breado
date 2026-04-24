@@ -40,3 +40,42 @@ img {
 * {
   scroll-behavior: smooth;
 }
+
+/*  SCROLL REVEAL EFFECTS */
+
+
+/* Default (fade + slight up) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Slide from left */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease;
+}
+
+/* Slide from right */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s ease;
+}
+
+/* Active state (when visible) */
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* ✨ Optional stagger smoothness */
+.reveal,
+.reveal-left,
+.reveal-right {
+  will-change: transform, opacity;
+}
