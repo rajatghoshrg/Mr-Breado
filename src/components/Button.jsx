@@ -5,7 +5,7 @@ const Button = ({
   onClick,
   className = "",
 }) => {
-  // 🎨 VARIANTS (color styles)
+  // VARIANTS (color styles)
   const variants = {
     primary:
       "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:scale-105 shadow-md",
@@ -20,7 +20,7 @@ const Button = ({
       "text-gray-700 hover:text-red-500",
   };
 
-  // 📏 SIZES
+  // SIZES
   const sizes = {
     sm: "px-3 py-1 text-sm",
     md: "px-5 py-2",

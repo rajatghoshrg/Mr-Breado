@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* HERO STATE */}
         {!scrolled && (
           <>
-            {/* 🌐 Language */}
+            {/*  Language */}
             <div className="relative">
               <button
                 onClick={() => setOpen(!open)}
@@ -102,7 +102,7 @@ const Navbar = () => {
               Become a Rider
             </Link>
 
-            {/* 🚀 Get App */}
+            {/* Get App */}
             <a href="#download">
               <Button size="md">
                 Get App

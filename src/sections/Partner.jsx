@@ -52,10 +52,9 @@ const Partner = () => {
                 <div
                   className={`
                     flex justify-center
-                    ${
-                      item.reverse
-                        ? "order-2 md:order-2 reveal-right"
-                        : "order-2 md:order-1 reveal-left"
+                    ${item.reverse
+                      ? "order-2 md:order-2 reveal-right"
+                      : "order-2 md:order-1 reveal-left"
                     }
                   `}
                 >
@@ -84,10 +83,9 @@ const Partner = () => {
                 <div
                   className={`
                     flex justify-center
-                    ${
-                      item.reverse
-                        ? "order-1 md:order-1 reveal-left"
-                        : "order-1 md:order-2 reveal-right"
+                    ${item.reverse
+                      ? "order-1 md:order-1 reveal-left"
+                      : "order-1 md:order-2 reveal-right"
                     }
                   `}
                 >
@@ -208,30 +206,18 @@ const Partner = () => {
               Just A Delivery Away!
             </h2>
 
-            
+
 
             {/* BUTTONS */}
 
             <div className="flex gap-6 mt-10 flex-wrap justify-center">
 
-              <button
-                className="
-                  bg-[#EF4444]
-                  hover:bg-red-600
-                  text-white
-                  px-10
-                  py-4
-                  rounded-full
-                  text-lg
-                  font-semibold
-                  transition-all
-                  duration-300
-                  shadow-xl
-                "
+              <Button
+                size="lg"
+                className="px-10 py-4 shadow-xl"
               >
                 Download App
-              </button>
-
+              </Button>
 
             </div>
 

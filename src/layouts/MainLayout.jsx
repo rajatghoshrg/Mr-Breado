@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import useReveal from "../hooks/useReveal"; // ✅ IMPORTANT
+import useReveal from "../hooks/useReveal"; 
 
 const MainLayout = ({ children }) => {
-  useReveal(); // ✅ global scroll animation
+  useReveal(); 
 
   return (
     <div className="min-h-screen flex flex-col">
