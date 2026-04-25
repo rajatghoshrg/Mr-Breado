@@ -2,7 +2,7 @@ import Hero from "../sections/Hero";
 import HowItWorks from "../sections/HowItWorks";
 import Partner from "../sections/Partner";
 import Deliverypartner from "../sections/Deliverypartner";
-import FAQ from "../sections/FAQ";
+import FAQ from "../sections/Faq";
 
 
 
