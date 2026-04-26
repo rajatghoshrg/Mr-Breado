@@ -4,43 +4,43 @@ import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "What makes Gintaa Food Delivery stand out?",
+    question: "What makes Mr. Breado Food Delivery stand out?",
     answer:
       "Mr. Breado offers the best food at the lowest price with no hidden fees, ensuring great deals and seamless delivery experience.",
   },
   {
-    question: "What opportunities does Gintaa provide for delivery partners?",
+    question: "What opportunities does Mr. Breado provide for delivery partners?",
     answer:
       "Delivery partners can earn flexibly with high demand orders, incentives, and a platform that supports growth.",
   },
   {
-    question: "What does it take to start delivering with Gintaa?",
+    question: "What does it take to start delivering with Mr. Breado?",
     answer:
       "Simply download the Delivery Partner App, register, and you're set to start earning quickly on Mr. Breado.",
   },
   {
-    question: "How can restaurants benefit from joining Gintaa?",
+    question: "How can restaurants benefit from joining Mr. Breado?",
     answer:
       "Restaurants get more visibility, increased orders, and access to a large customer base.",
   },
   {
-    question: "Is it complicated for restaurants to join Gintaa?",
+    question: "Is it complicated for restaurants to join Mr. Breado?",
     answer:
       "No, onboarding is simple, fast, and hassle-free.",
   },
   {
-    question: "Is there a fee to join Gintaa as a restaurant partner?",
+    question: "Is there a fee to join Mr. Breado as a restaurant partner?",
     answer:
       "No hidden fees. Transparent pricing ensures better earnings.",
   },
   {
-    question: "What kind of support does Gintaa offer to restaurant partners?",
+    question: "What kind of support does Mr. Breado offer to restaurant partners?",
     answer:
       "Dedicated support team, analytics dashboard, and growth tools.",
   },
   {
     question:
-      "Why choose Gintaa for food delivery, delivery work, or restaurant partnership?",
+      "Why choose Mr. Breado for food delivery, delivery work, or restaurant partnership?",
     answer:
       "Because Mr. Breado combines affordability, speed, and reliability into one platform.",
   },
@@ -91,7 +91,6 @@ const FAQ = () => {
                 className="border rounded-md bg-white overflow-hidden"
               >
 
-                {/* QUESTION */}
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
@@ -114,7 +113,6 @@ const FAQ = () => {
                   />
                 </button>
 
-                {/* ANSWER */}
                 <div
                   className={`
                     px-5 text-sm text-gray-500 overflow-hidden transition-all duration-300
@@ -131,11 +129,10 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/*  DOWNLOAD SECTION */}
+      {/* DOWNLOAD SECTION */}
       <section className="bg-gradient-to-r from-[#7dd3fc] to-[#f59e0b] py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
 
-          {/* 📱 IMAGE */}
           <div className="flex justify-center">
             <img
               src="/images/faq/faq_image.png"
@@ -144,7 +141,6 @@ const FAQ = () => {
             />
           </div>
 
-          {/* TEXT */}
           <div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
@@ -155,7 +151,6 @@ const FAQ = () => {
               Available for IOS and Android devices.
             </p>
 
-            {/*  TAB NAVBAR */}
             <div className="flex gap-6 border-b border-gray-400 w-fit mb-6">
               {tabs.map((tab) => (
                 <button
@@ -176,7 +171,6 @@ const FAQ = () => {
               ))}
             </div>
 
-            {/*  DYNAMIC CONTENT */}
             <h3 className="text-xl md:text-2xl font-semibold mb-2">
               {tabContent[activeTab].title}
             </h3>
@@ -185,7 +179,6 @@ const FAQ = () => {
               {tabContent[activeTab].desc}
             </p>
 
-            {/*  BUTTON COMPONENT */}
             <Button size="md">
               Download the App
             </Button>
